@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise Letter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Orbitron', sans-serif;
+      overflow: hidden;
+    }
+
+    .envelope {
+      position: relative;
+      width: 320px;
+      height: 220px;
+      background: #1f1f1f;
+      border-radius: 12px;
+      box-shadow: 0 12px 35px rgba(0, 255, 200, 0.2);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 45px rgba(0, 255, 200, 0.4);
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #00f2ff;
+      transform-origin: top;
+      transition: transform 0.6s ease;
+      z-index: 2;
+      border-bottom: 2px solid #00ffc8;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    .envelope:hover .flap {
+      transform: rotateX(-120deg);
+    }
+
+    .letter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #121212;
+      padding: 24px;
+      box-sizing: border-box;
+      transform: translateY(100%);
+      transition: transform 0.6s ease;
+      z-index: 1;
+      border-radius: 12px;
+      color: white;
+    }
+
+    .envelope:hover .letter {
+      transform: translateY(0);
+    }
+
+    .letter h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #00ffc8;
+      font-size: 2.2em;
+      margin: 0 0 14px;
+      text-shadow: 0 0 10px #00ffc8;
+    }
+
+    .letter p {
+      font-size: 1em;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    .from {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 0.85em;
+      color: #888;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope">
+    <div class="flap"></div>
+    <div class="letter">
+      <h1>Hello There! Fuck You</h1>
+      <p>HALO MEMEKK!</p>
+      <div class="from">- From Fakhri</div>
+    </div>
+  </div>
+</body>
+</html>
